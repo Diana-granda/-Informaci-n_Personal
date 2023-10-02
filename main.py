@@ -1,6 +1,20 @@
-nombre = input('¿Cómo te llamas? ')
-edad = input('¿Cuántos años tienes? ')
-ciudad = input('¿Cuál es tu ciudad? ')
-profesion = input('¿Cuál es tu profesion? ')
-persona = {'nombre': nombre, 'edad': edad, 'ciudad': ciudad, 'profesion': profesion}
-print(persona['nombre'], 'tiene', persona['edad'], 'años, vive en', persona['ciudad'], 'y su profesion es', persona['profesion'])
+informacion_personal = {
+    "Nombre": "Diana Granda",
+    "Edad": 25,
+    "Ciudad": "Lago Agrio",
+    "Profesion":""
+}
+
+informacion_personal["Ciudad"] = "Lago agrio"
+informacion_personal["Profesion"] = "Sistemas informaticos"
+
+# Verificar si "telefono" no está presente y luego agregarlo
+if "Telefono" not in informacion_personal:
+    informacion_personal["Telefono"] = "0968227024"
+
+# Verificar si "edad" está presente y luego eliminarlo
+if "Edad" in informacion_personal:
+    del informacion_personal["Edad"]
+
+print(informacion_personal)
+
